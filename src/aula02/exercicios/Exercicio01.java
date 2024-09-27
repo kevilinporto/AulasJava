@@ -5,7 +5,7 @@ public class Exercicio01 {
 
         int idade = 18;
         float altura = 1.67f;
-        double peso = 61.4;
+        double peso = 61.5;
 
         System.out.println(idade);
         System.out.println(altura);
