@@ -1,6 +1,6 @@
 package aula02.exemplos;
 
-public class Exemplo3 {
+public class Exemplo3_OperadoresComparacao {
     public static void main(String[] args) {
         int num1 = 7, num2 = 7;
         boolean resposta;
@@ -19,7 +19,6 @@ public class Exemplo3 {
 
         resposta = num1 != num2;
         System.out.println(num1 + " != " + num2 + " = " + resposta);
-        System.out.println();
 
     }
 }

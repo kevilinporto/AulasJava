@@ -1,6 +1,6 @@
 package aula02.exemplos;
 
-public class Exemplo2 {
+public class Exemplo2_OperadoresAritmeticos {
     public static void main(String[] args) {
         int total, numero1 = 2, numero2 = 4;
 
