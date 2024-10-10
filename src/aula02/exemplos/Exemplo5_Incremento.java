@@ -1,6 +1,6 @@
 package aula02.exemplos;
 
-public class Exemplo5 {
+public class Exemplo5_Incremento {
     public static void main(String[] args) {
         int num1 = 0;
         System.out.println("num1 = " + num1);
