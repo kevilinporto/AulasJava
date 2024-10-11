@@ -7,9 +7,8 @@ public class Exercicio01 {
         float altura = 1.67f;
         double peso = 61.5;
 
-        System.out.println(idade);
-        System.out.println(altura);
-        System.out.println(peso);
+        System.out.println("Sua idade é " + idade + "\nSua altura é " + altura + "\nSeu peso é " + peso);
+
 
     }
 }
