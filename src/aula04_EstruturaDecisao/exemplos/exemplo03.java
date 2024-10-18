@@ -6,19 +6,21 @@ public class exemplo03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite a idade: ");
+        System.out.print("Digite a idade: ");
         int idade = scanner.nextInt();
 
-        if (idade >= 0 && idade <= 12) {
+        if (idade > 0 && idade <= 12) {
             System.out.println("Você é criança");
-        } else if (idade >= 13 && idade <= 17) {
+        } else if (idade > 12 && idade <= 17) {
             System.out.println("Você é adolescente");
-        } else if (idade >= 18 && idade <= 64) {
+        } else if (idade > 17 && idade <= 64) {
             System.out.println("Você é adulto");
-        } else if (idade >= 65){
+        } else if (idade > 64) {
             System.out.println("Você é idoso");
-        }else {
+        } else {
             System.out.println("Idade inválida");
         }
+
+        scanner.close();
     }
 }
