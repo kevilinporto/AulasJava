@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class exercicio04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int vendas;
+        double vendas;
         double porcentagem;
         double comissao;
 
