@@ -13,8 +13,25 @@ public class exercicio04 {
         vendas = scanner.nextInt();
 
         if (vendas < 1000) {
+        porcentagem = 0.05;
+        comissao = vendas * porcentagem;
+
+        System.out.println("O valor total da comissão é: " + comissao);
+
+        } else if (vendas >= 1000 && vendas <= 5000) {
+        porcentagem = 0.1;
+        comissao = vendas * porcentagem;
+        System.out.println("O valor total da comissão é: " + comissao);
+
+        } else if (vendas > 5000){
+        porcentagem = 0.15;
+        comissao = vendas * porcentagem;
+        System.out.println("O valor total da comissão é: " + comissao);
+
+        } else {
+            System.out.println("Valor de vendas inválido.");
 
 
-        }
+        } scanner.close();
     }
 }
