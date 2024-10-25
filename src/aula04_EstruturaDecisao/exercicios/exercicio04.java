@@ -12,7 +12,7 @@ public class exercicio04 {
         System.out.println("Digite o valor das vendas: ");
         vendas = scanner.nextInt();
 
-        if (vendas < 1000) {
+        if (vendas > 0 || vendas < 1000) {
         porcentagem = 0.05;
         comissao = vendas * porcentagem;
 
