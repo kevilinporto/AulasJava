@@ -1,4 +1,4 @@
-package Aula05_Repeticao;
+package Aula05_Repeticao.Exemplos;
 
 import java.util.Scanner;
 

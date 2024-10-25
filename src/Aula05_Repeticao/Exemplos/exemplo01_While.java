@@ -1,19 +1,18 @@
-package Aula05_Repeticao;
+package Aula05_Repeticao.Exemplos;
 
 import java.util.Scanner;
 
-public class exemplo02_DoWhile {
+public class exemplo01_While {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int idade;
+        int idade = 0;
 
-        do { //com o do while não é necessário inicializar a variável antes, já que ele executará primeiro antes de comparar
+        while (idade < 18) {
             System.out.println("Digite sua idade: ");
             idade = scanner.nextInt();
             System.out.println(idade);
-        } while (idade < 18);
+        }
         System.out.println("Você é maior de idade");
         scanner.close();
-
     }
 }

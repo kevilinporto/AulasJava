@@ -1,10 +1,10 @@
-package Aula05_Repeticao;
+package Aula05_Repeticao.Exemplos;
 
-public class Exemplo05_Break {
+public class Exemplo06_Continue {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             if (i == 5) {
-                break;
+                continue;
             }
             System.out.println(i);
         }
