@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class Exercício03 {
     public static void main(String[] args) {
+        //calculo fatorial
         Scanner scanner = new Scanner(System.in);
-        int num1;
-        int fatorial = 1;
+
+        int resultado = 1;
+        int fatorial;
+
+        System.out.println("Digite o número para calcular seu fatorial: ");
+        fatorial = scanner.nextInt();
 
         do {
-            System.out.println("Digite o número para calcular o fatorial: ");
-            num1 = scanner.nextInt();
+            resultado = resultado * fatorial;
+            fatorial --;
 
-        }while (fatorial > 0);
-        num1 = num1 * fatorial;
-        fatorial ++;
-        System.out.println("A resposta é " + num1);
+        }while (fatorial > 1);
 
-
-
-
+        System.out.println("O resultado do fatorial é: " + resultado);
     }
 }

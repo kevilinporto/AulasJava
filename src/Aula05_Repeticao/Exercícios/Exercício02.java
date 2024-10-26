@@ -2,15 +2,18 @@ package Aula05_Repeticao.Exercícios;
 
 public class Exercício02 {
     public static void main(String[] args) {
-        int pares = 0;
-        int contador = 2;
+        //soma dos números pares de 1 a 100 utilizando o while
 
-        while (pares < 100){
-            if (contador % 2 == 0);
-            pares = contador + pares;
-            contador += 2;
+        int numAtual = 0;
+        int soma = 0;
+
+        while (numAtual < 101) {
+            soma = soma + numAtual;
+            numAtual += 2;
 
         }
-        System.out.println(pares);
+
+        System.out.println(soma);
     }
 }
+
