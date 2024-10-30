@@ -14,7 +14,7 @@ public class menu {
             System.out.println("\tDigite 3 para sair. ");
             opcao = scanner.nextInt();
             scanner.nextLine();
-
+//
             switch (opcao){
                 case 1:
                     System.out.println("Digite o nome: ");
