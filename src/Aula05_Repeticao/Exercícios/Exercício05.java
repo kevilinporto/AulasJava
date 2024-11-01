@@ -12,7 +12,6 @@ public class Exercício05 {
             System.out.println("Digite a nota: ");;
             nota = scanner.nextInt();
             notatotal += nota;
-            System.out.println(notatotal);
 
         }
         System.out.println("A média é: " + notatotal / 5);

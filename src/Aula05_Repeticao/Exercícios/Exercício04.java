@@ -29,6 +29,6 @@ public class Exercício04 {
             System.out.println(numero + " não é um número primo.");
         }
 
-        scanner.close(); /
+        scanner.close();
     }
 }
