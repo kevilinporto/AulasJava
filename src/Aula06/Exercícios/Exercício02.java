@@ -6,22 +6,18 @@ public class Exercício02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String [] vetor = {"A", "B", "C", "D", "E", "F"};
-        boolean teste = false;
+        String aviso = "Caractere não encontrado";
+        String[] vetor = {"A", "B", "C", "D", "E", "F"};
         String caractere;
         System.out.println("Digite um caractere: ");
         caractere = scanner.nextLine();
 
-        for (String vetores : vetor) {
-            if (vetores.equals(caractere)){
-                System.out.println("Caractere encontrado na posição: " + vetor);
+        for (int i = 0; i < vetor.length; i++) {
+            if (caractere.equals(vetor[i])){
+            aviso = "Caractere encontrado na posição: " + i;
                 break;
-            }else{
-                System.out.println("Caractere não encontrado");
-
             }
-
         }
-
+        System.out.println(aviso);
     }
 }
