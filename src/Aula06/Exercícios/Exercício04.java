@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Exercício04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         double [] notas = new double[4];
         double soma = 0;
 

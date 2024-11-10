@@ -9,6 +9,7 @@ public class Exercício02 {
         String aviso = "Caractere não encontrado";
         String[] vetor = {"A", "B", "C", "D", "E", "F"};
         String caractere;
+
         System.out.println("Digite um caractere: ");
         caractere = scanner.nextLine();
 
