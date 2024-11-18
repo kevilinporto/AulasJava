@@ -1,3 +1,5 @@
+package Projeto;
+
 import java.util.Scanner;
 
 public class Projeto {
@@ -10,8 +12,9 @@ public class Projeto {
         do {
             System.out.println("Selecione uma opção: ");
             System.out.println("\t1 - CADASTRO");
-            System.out.println("\t2 - CONSULTA");
-            System.out.println("\t3 - FIM");
+            System.out.println("\t2 ATUALIZAÇÃO DE CADASTRO");
+            System.out.println("\t3 - CONSULTA");
+            System.out.println("\t4 - FIM");
 
             opcao = scanner.nextInt();
             scanner.nextLine(); // Limpa o buffer do scanner
@@ -65,7 +68,7 @@ public class Projeto {
                     }
                     break;
 
-                case 3:
+                case 4:
                     //sair
                     System.out.println("Fim do programa.");
                     break;
@@ -76,7 +79,7 @@ public class Projeto {
                     break;
             }
 
-        } while (opcao != 3);
+        } while (opcao != 4);
 
         scanner.close();
     }
