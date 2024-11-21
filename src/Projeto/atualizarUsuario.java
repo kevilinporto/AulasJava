@@ -2,7 +2,7 @@ package Projeto;
 
 import java.util.Scanner;
 
-public class atualizar {
+public class atualizarUsuario {
     public static void atualizarCadastro(String[][] matriz, int contador, Scanner scanner) {
         System.out.print("Digite o nome do aluno para atualizar: ");
         String nomeConsulta = scanner.nextLine();

@@ -10,8 +10,9 @@ public class Exercício05 {
         System.out.println("A média é " + media);
 
     }
-    public static double calcularMedia(double nota1, double nota2, double nota3){
-        return (nota1 + nota2 + nota3)/3;
+
+    public static double calcularMedia(double nota1, double nota2, double nota3) {
+        return (nota1 + nota2 + nota3) / 3;
 
     }
 }

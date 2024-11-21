@@ -2,7 +2,7 @@ package Projeto;
 
 import java.util.Scanner;
 
-public class consulta {
+public class consultarUsuario {
     // Função para consultar alunos pelo nome
     public static void consultarAluno(String[][] matriz, int contador, Scanner scanner) {
         System.out.print("Digite o nome do aluno para consulta: ");

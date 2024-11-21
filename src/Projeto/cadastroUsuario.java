@@ -2,7 +2,7 @@ package Projeto;
 
 import java.util.Scanner;
 
-public class alunoCadastro {
+public class cadastroUsuario {
     public static void cadastrarAluno(String[][] matriz, int contador) {
         Scanner scanner = new Scanner(System.in);
 

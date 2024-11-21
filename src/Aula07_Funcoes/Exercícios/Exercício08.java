@@ -10,12 +10,14 @@ public class Exercício08 {
         System.out.println("O resultado é " + numero);
 
     }
-    public static int calcularFatorial (int fatorial){
+
+    //função para cálculo de fatorial
+    public static int calcularFatorial(int fatorial) {
         int resultado = 1;
         do {
             resultado = resultado * fatorial;
-            fatorial --;
-        }while (fatorial > 1);
+            fatorial--;
+        } while (fatorial > 1);
 
         return resultado;
     }

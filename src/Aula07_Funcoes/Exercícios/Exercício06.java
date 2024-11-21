@@ -10,9 +10,9 @@ public class Exercício06 {
         numeroDigitado = scanner.nextInt();
         System.out.println(verificarPar(numeroDigitado));
 
-
     }
-    public static boolean verificarPar (int numero){
+
+    public static boolean verificarPar(int numero) {
 
         return numero % 2 == 0;
     }

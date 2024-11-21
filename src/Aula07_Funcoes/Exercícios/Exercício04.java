@@ -9,7 +9,8 @@ public class Exercício04 {
         double conversao = converterCelsiusParaFahrenheit(scanner.nextDouble());
         System.out.println("A temperatura digitada em fahrenheit é: " + conversao);
     }
-    public static double converterCelsiusParaFahrenheit (double celsius){
+
+    public static double converterCelsiusParaFahrenheit(double celsius) {
         return celsius * 1.8 + 32;
     }
 }
