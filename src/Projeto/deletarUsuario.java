@@ -28,11 +28,14 @@ public class deletarUsuario {
                         matriz[i][2] = null;
                         System.out.println("Usuário excluído com sucesso");
 
+
                     case 2:
                         System.out.println("Cancelando");
                 }
 
 
+            }else {
+                System.out.println("Usuário não encontrado.");
             }
 
         }

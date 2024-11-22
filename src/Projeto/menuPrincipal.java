@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class menuPrincipal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[][] matriz = new String[13][3];  // Matriz 13x3 para armazenar nome, matrícula e telefone
+        String[][] matriz = new String[13][3];  // Matriz com três colunas para armazenar nome, matrícula e telefone
         int opcao;
         int contador = 0;  // Controla quantos alunos foram cadastrados
 
@@ -24,21 +24,25 @@ public class menuPrincipal {
 
             switch (opcao) {
                 case 1:
+                    // função para cadastrar o usuário
                     cadastroUsuario.cadastrarAluno(matriz, contador);
                     contador++;
                     break;
 
                 case 2:
+                    // função para consultar o usuário no sistema
                     consultarUsuario.consultarAluno(matriz, contador, scanner);
                     break;
 
                 case 3:
+                    // função para atualizar o cadastro do usuário
                     atualizarUsuario.atualizarCadastro(matriz, contador, scanner);
                     break;
 
                 case 4:
-                    //função para deletar usuário ainda não terminada
+                    //função para deletar usuário. WIP
                     deletarUsuario.excluirUsuario(matriz, contador);
+                    contador --;
                     break;
 
                 case 5:
