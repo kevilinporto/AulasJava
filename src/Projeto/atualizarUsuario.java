@@ -30,6 +30,5 @@ public class atualizarUsuario {
         if (!encontrado) {
             System.out.println("Aluno não encontrado.");
         }
-        scanner.close();
     }
 }

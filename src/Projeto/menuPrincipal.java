@@ -54,10 +54,8 @@ public class menuPrincipal {
                     break;
             }
         } while (opcao != 5);
-
         scanner.close();
     }
-
 
 
 }

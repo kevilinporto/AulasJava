@@ -19,7 +19,6 @@ public class cadastroUsuario {
         } else {
             System.out.println("Limite de cadastros atingido.");
         }
-        scanner.close();
     }
 
 }

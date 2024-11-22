@@ -8,18 +8,19 @@ public class deletarUsuario {
 
         System.out.println("Digite o nome do usuário a ser deletado: ");
         String nome = scanner.nextLine();
-        int opcao = 0;
+        int opcao;
         for (int i = 0; i < matriz.length; i++) {
             if (matriz[i][0].equals(nome)){
-
                 System.out.println("""
                         Usuário encontrado.
                         
-                        Tem certeza que deseja deletá-lo?
+                        Tem certeza de que deseja deletar todas as informações?
                         
                         1 - SIM
                         2 - NÃO
+                        
                         """);
+                opcao = scanner.nextInt();
                 switch (opcao){
                     case 1:
                         System.out.println("Deletando usuário...");
