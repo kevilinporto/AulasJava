@@ -7,6 +7,7 @@ public class Exercício09 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o valor da base: ");
         int baseDigitar = scanner.nextInt();
+
         System.out.print("Digite o valor da potência: ");
         int expoenteDigitar = scanner.nextInt();
 

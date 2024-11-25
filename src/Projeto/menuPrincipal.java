@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class menuPrincipal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[][] matriz = new String[13][3];  // Matriz com três colunas para armazenar nome, matrícula e telefone
+        String[][] matriz = new String[15][3];  // Matriz com três colunas para armazenar nome, matrícula e telefone
         int opcao;
         int contador = 0;  // Controla quantos alunos foram cadastrados
 
@@ -13,9 +13,10 @@ public class menuPrincipal {
             System.out.println("""
                         1 - CADASTRO
                         2 - CONSULTA
-                        3 - ATUALIZAÇÃO DE CADASTRO
-                        4 - DELETAR USUÁRIO
-                        5 - FIM
+                        3 - EXIBIR TODOS OS USUÁRIOS CADASTRADOS
+                        4 - ATUALIZAÇÃO DE CADASTRO
+                        5 - DELETAR USUÁRIO
+                        6 - FIM
                     """);
 
 
@@ -27,6 +28,7 @@ public class menuPrincipal {
                     // função para cadastrar o usuário
                     cadastroUsuario.cadastrarAluno(matriz, contador);
                     contador++;
+                    manipulacaoArquivos.armazenarDados(matriz);
                     break;
 
                 case 2:
@@ -35,17 +37,22 @@ public class menuPrincipal {
                     break;
 
                 case 3:
+                    // função para exibir todos os usuários cadastrados
+                    listaUsuarios.exibirTodosUsuarios(matriz);
+                    break;
+
+                case 4:
                     // função para atualizar o cadastro do usuário
                     atualizarUsuario.atualizarCadastro(matriz, contador, scanner);
                     break;
 
-                case 4:
+                case 5:
                     //função para deletar usuário. WIP
                     deletarUsuario.excluirUsuario(matriz, contador);
-                    contador --;
+                    contador--;
                     break;
 
-                case 5:
+                case 6:
                     System.out.println("Fim do programa.");
                     break;
 
@@ -53,7 +60,7 @@ public class menuPrincipal {
                     System.out.println("Opção inválida.");
                     break;
             }
-        } while (opcao != 5);
+        } while (opcao != 6);
         scanner.close();
     }
 
