@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Exercício05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        float nota = 0;
+        float nota;
         float notatotal = 0;
 
         for (int i = 1; i <= 5; i++) {

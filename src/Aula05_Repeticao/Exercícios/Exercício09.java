@@ -8,7 +8,7 @@ public class Exercício09 {
 
         double numeroRandomD = Math.random() * 101;
         int numeroRandomI = (int) numeroRandomD; // é necessário fazer o casting para int pois o Math.random nos dá um número decimal
-        System.out.println(numeroRandomI);
+        System.out.println(numeroRandomI); // apenas para verificar o número aleatório.
         int numeroDigitado;
         System.out.println("Digite um número entre 1 e 100 para advinhar o valor aleatório escolhido pelo programa: ");
 

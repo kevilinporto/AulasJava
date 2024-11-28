@@ -6,7 +6,7 @@ public class Exercício08 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int numeros = 0;
+        int numeros;
         int pares = 0;
         int impares = 0;
 

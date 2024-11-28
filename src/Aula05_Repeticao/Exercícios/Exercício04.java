@@ -23,7 +23,7 @@ public class Exercício04 {
         }
 
 
-        if (ehPrimo) {
+        if (ehPrimo == true) {
             System.out.println(numero + " é um número primo.");
         } else {
             System.out.println(numero + " não é um número primo.");
