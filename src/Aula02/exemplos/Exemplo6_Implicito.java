@@ -1,4 +1,4 @@
-package aula02.exemplos;
+package Aula02.exemplos;
 import java.util.Scanner;
 
 public class Exemplo6_Implicito {
