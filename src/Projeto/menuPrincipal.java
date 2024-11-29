@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class menuPrincipal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String[][] matriz = new String[15][3];  // Matriz com três colunas para armazenar nome, matrícula e telefone
+        int qtdUsuarios = 0;
+        String [] cabecalho = {"ID", "Nome", "Telefone", "Email"};
+        String[][] matrizCadastro = new String[qtdUsuarios][cabecalho.length];  // Matriz com três colunas para armazenar nome, matrícula e telefone
         int opcao;
         int contador = 0;  // Controla quantos alunos foram cadastrados
 
@@ -26,29 +28,29 @@ public class menuPrincipal {
             switch (opcao) {
                 case 1:
                     // função para cadastrar o usuário
-                    cadastroUsuario.cadastrarAluno(matriz, contador);
+                    cadastroUsuario.cadastrarAluno(matrizCadastro, contador);
                     contador++;
-                    manipulacaoArquivos.armazenarDados(matriz);
+                    manipulacaoArquivos.armazenarDados(matrizCadastro);
                     break;
 
                 case 2:
                     // função para consultar o usuário no sistema
-                    consultarUsuario.consultarAluno(matriz, contador, scanner);
+                    consultarUsuario.consultarAluno(matrizCadastro, contador, scanner);
                     break;
 
                 case 3:
                     // função para exibir todos os usuários cadastrados
-                    listaUsuarios.exibirTodosUsuarios(matriz);
+                    listaUsuarios.exibirTodosUsuarios(matrizCadastro);
                     break;
 
                 case 4:
                     // função para atualizar o cadastro do usuário
-                    atualizarUsuario.atualizarCadastro(matriz, contador, scanner);
+                    atualizarUsuario.atualizarCadastro(matrizCadastro, contador, scanner);
                     break;
 
                 case 5:
                     //função para deletar usuário. WIP
-                    deletarUsuario.excluirUsuario(matriz, contador);
+                    deletarUsuario.excluirUsuario(matrizCadastro, contador);
                     contador--;
                     break;
 

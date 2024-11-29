@@ -1,9 +1,9 @@
-package Projeto;
+package Desafios;
 
 import java.util.Scanner;
 
-public class cadastroUsuario {
-    public static void cadastrarAluno(String[][] matriz, int contador) {
+public class Desafio01 {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Quantos usuários você quer cadastrar? ");
 
