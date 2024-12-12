@@ -1,16 +1,18 @@
 package Desafios;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Desafio03 {
     static Scanner scanner = new Scanner(System.in);
     static String[] cabecalho = {"ID", "Nome", "Telefone", "Email"};
-    static String[][] matrizCadastro = {{"", ""}}; //inicializando para nao ter problema no codigo | utilizando aspas para ser string
+    static String[][] matrizCadastro = {{"",""}}; //inicializando para nao ter problema no codigo | utilizando aspas para ser string
+
+    static File arquivoBancoDeDados = new File(System.getProperty("user.home"), "bancoDeDados.txt"); //pede para a JVM que pegue o caminho para a pasta do usuário
 
     public static void main(String[] args) {
+        carregarDadosDoArquivo();
         matrizCadastro[0] = cabecalho;
 
 
@@ -88,6 +90,7 @@ public class Desafio03 {
             }
         }
         matrizCadastro = novaMatriz;
+        salvarDadosNoArquivo();
     }
 
     public static void deletarUsuarios() {
@@ -108,11 +111,12 @@ public class Desafio03 {
         matrizCadastro = novaMatriz;
         System.out.println("Usuário deletado com sucesso!");
         exibirUsuarios();
+        salvarDadosNoArquivo();
     }
 
+
     public static void salvarDadosNoArquivo() {
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""));
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(arquivoBancoDeDados))){
             for (String[] linha : matrizCadastro) {
                 bufferedWriter.write(String.join(",", linha) + "\n");
             }
@@ -123,6 +127,45 @@ public class Desafio03 {
         }
 
     }
+
+    public static void carregarDadosDoArquivo(){
+        String linha;
+        StringBuilder conteudoDoArquivo = new StringBuilder();
+
+        if (!arquivoBancoDeDados.exists()) { //se o arquivo não existe, cria o arquivo. Se não, pula direto para a leitura do arquivo
+            try {
+                if(arquivoBancoDeDados.createNewFile()){ // se o arquivo for criado:
+                    System.out.println("Arquivo criado " + arquivoBancoDeDados.getName() + " com sucesso!");
+                }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivoBancoDeDados))){
+
+            while ((linha = bufferedReader.readLine()) != null){ //leia enquanto for diferente de null (quando não existir mais linhas)
+                conteudoDoArquivo.append(linha).append("\n"); // o \n após a linha serve para fechar a linha
+                // o split retorna um Array
+            }
+
+            String [] linhaDadosUsuario = conteudoDoArquivo.toString().split("\n"); //toString transforma o StringBuilder em uma String, para que possamos usar o split, que é um método de strings
+            //agrupa tudo e guarda conteudoDoArquivo no Array linhaDadosUsuario
+
+            matrizCadastro = new String[linhaDadosUsuario.length][cabecalho.length]; // nova matrizCadastro montada para comportar o tamanho dos dados
+
+            for (int i = 0; i < linhaDadosUsuario.length; i++) { //pega a linha, quebra ela e coloca no array
+                matrizCadastro[i] = linhaDadosUsuario[i].split(","); //quebra os dados em ID, NOME, TELEFONE, EMAIL
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
 
     public static void atualizarUsuarios() {
 
@@ -138,6 +181,7 @@ public class Desafio03 {
             matrizCadastro[idEscolhido][coluna] = scanner.nextLine();
         }
         exibirUsuarios();
+        salvarDadosNoArquivo();
     }
 }
 
