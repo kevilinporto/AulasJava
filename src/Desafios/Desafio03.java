@@ -1,5 +1,7 @@
 package Desafios;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -52,7 +54,7 @@ public class Desafio03 {
         } while (opcao != 5);
     }
 
-    private static void exibirUsuarios() {
+    public static void exibirUsuarios() {
         StringBuilder tabela = new StringBuilder();
         for (String[] linha : matrizCadastro) { //Matriz de String
             for (int coluna = 0; coluna < matrizCadastro[0].length; coluna++) {
@@ -66,7 +68,7 @@ public class Desafio03 {
 
     }
 
-    private static void cadastrarUsuarios() {
+    public static void cadastrarUsuarios() {
 
         System.out.print("Quantas pessoas você deseja cadastrar?");
         int qtdPessoas = scanner.nextInt();
@@ -88,7 +90,7 @@ public class Desafio03 {
         matrizCadastro = novaMatriz;
     }
 
-    private static void deletarUsuarios() {
+    public static void deletarUsuarios() {
         System.out.println("Escolha o ID do usuário que deseja deletar: ");
         int idEscolha = scanner.nextInt();
         scanner.nextLine();
@@ -108,7 +110,21 @@ public class Desafio03 {
         exibirUsuarios();
     }
 
-    private static void atualizarUsuarios() {
+    public static void salvarDadosNoArquivo() {
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(""));
+            for (String[] linha : matrizCadastro) {
+                bufferedWriter.write(String.join(",", linha) + "\n");
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException();
+
+        }
+
+    }
+
+    public static void atualizarUsuarios() {
 
         exibirUsuarios();
 
